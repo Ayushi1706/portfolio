@@ -5,9 +5,11 @@ require("dotenv").config();
 const contactRoutes = require("./routers/contactRoutes");
 
 const app = express();
-
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://ayushisingh.vercel.app"
+  ],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"]
 };
