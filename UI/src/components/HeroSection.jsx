@@ -47,6 +47,7 @@ export const HeroSection = () => {
                 href="https://github.com/Ayushi1706"
                 target="_blank"
                 className="bg-black p-3 rounded-full hover:bg-gray-800 transition"
+                rel="noopener noreferrer"
               >
                 <FaGithub />
               </a>
@@ -55,6 +56,7 @@ export const HeroSection = () => {
                 href="https://www.linkedin.com/in/ayushi-singh-278400349/"
                 target="_blank"
                 className="bg-black p-3 rounded-full hover:bg-gray-800 transition"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
