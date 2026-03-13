@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd Backend && npm run dev",
+    "frontend": "cd UI && npm start"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

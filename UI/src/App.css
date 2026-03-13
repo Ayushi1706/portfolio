@@ -1,0 +1,72 @@
+.animated-bg {
+    background:
+      radial-gradient(100% 100% at var(--12-x-position) var(--12-y-position), #2b0047 0%, transparent),
+      radial-gradient(100% 100% at var(--13-x-position) var(--13-y-position), #151220 0%, transparent),
+      #1b253b;
+  
+    animation: main 10s infinite ease-in-out;
+  }
+  
+  /* CSS Custom Properties */
+  @property --12-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+  }
+  
+  @property --12-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+  }
+  
+  @property --13-x-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%;
+  }
+  
+  @property --13-y-position {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%;
+  }
+  
+  :root {
+    --12-x-position: 20%;
+    --12-y-position: 80%;
+    --13-x-position: 80%;
+    --13-y-position: 20%;
+  }
+  
+  /* Animation */
+  @keyframes main {
+  
+    25% {
+      --12-x-position: 15%;
+      --12-y-position: 15%;
+      --13-x-position: 85%;
+      --13-y-position: 80%;
+    }
+  
+    50% {
+      --12-x-position: 80%;
+      --12-y-position: 15%;
+      --13-x-position: 15%;
+      --13-y-position: 85%;
+    }
+  
+    75% {
+      --12-x-position: 30%;
+      --12-y-position: 90%;
+      --13-x-position: 90%;
+      --13-y-position: 30%;
+    }
+  
+    100% {
+      --12-x-position: 20%;
+      --12-y-position: 80%;
+      --13-x-position: 80%;
+      --13-y-position: 20%;
+    }
+  }
