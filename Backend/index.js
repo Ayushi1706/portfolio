@@ -11,11 +11,14 @@ const corsOptions = {
     "http://localhost:3000",
     "https://ayushisingh.vercel.app"
   ],
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"]
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true
 };
 
 app.use(cors(corsOptions));
+app.options("*", cors());   // 🔥 handles preflight requests
+
 app.use(express.json());
 
 app.use("/api/contact", contactRoutes);
