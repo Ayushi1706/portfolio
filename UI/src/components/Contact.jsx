@@ -41,7 +41,7 @@ export const Contact = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        "https://portfolio-backend-gzvc.onrender.com",
+        "https://portfolio-backend-gzvc.onrender.com/api/contact",
         formData
       );
   
