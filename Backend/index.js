@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-
 const contactRoutes = require("./routers/contactRoutes");
 
 const app = express();
@@ -17,10 +16,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors());   // 🔥 handles preflight requests
-
+app.options("/*", cors());   
 app.use(express.json());
-
 app.use("/api/contact", contactRoutes);
 
 app.get("/", (req, res) => {
@@ -28,7 +25,6 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 4000;
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
