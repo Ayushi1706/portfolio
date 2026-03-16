@@ -40,10 +40,10 @@ export const Contact = () => {
   
     try {
       setLoading(true);
-      const res = await axios.post(
-        "https://portfolio-backend-gzvc.onrender.com/api/contact",
-        formData
-      );
+     const res = await axios.post(
+  "https://portfolio-puxo.onrender.com/api/contact",
+  formData
+);
   
       toast.success(res.data.message);
   
